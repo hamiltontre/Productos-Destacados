@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  background-color: #343a40;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* Sección principal */
+main {
+  padding: 2rem;
+}
+
+/* Tarjetas de productos */
+.featured-products {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 30%;
+  box-sizing: border-box;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+/* Imagen de producto: todas igual tamaño sin deformarse */
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #fff; /* opcional: para que se vea bien el espacio libre */
+}
+
+/* Botón */
+.product-card button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.product-card button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Pie de página */
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive: para pantallas pequeñas */
+@media (max-width: 768px) {
+  .featured-products {
+    flex-direction: column;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+}
